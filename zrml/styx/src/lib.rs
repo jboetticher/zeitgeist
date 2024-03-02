@@ -89,6 +89,8 @@ pub mod pallet {
         #[pallet::call_index(0)]
         #[pallet::weight(T::WeightInfo::cross())]
         pub fn cross(origin: OriginFor<T>) -> DispatchResult {
+
+/*
             let who = ensure_signed(origin)?;
 
             if Crossings::<T>::contains_key(&who) {
@@ -111,7 +113,7 @@ pub mod pallet {
             Crossings::<T>::insert(&who, ());
 
             Self::deposit_event(Event::AccountCrossed(who, amount.saturated_into()));
-
+*/
             Ok(())
         }
 
